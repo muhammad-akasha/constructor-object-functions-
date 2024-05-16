@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        color: #fff;background: rgba(219, 133, 3, 0.781);font-family: cursive
+      }
+      div {
+        margin-top: 20px;
+      }
+      label {
+        font-size: 25px;
+      }
+      #name , #address {
+        width: 50%;padding: 7px 10px;border-radius:10px
+      }
+      span {
+        font-size: 24px
+      }
+      select{
+        width: 50%;padding: 7px 10px;border-radius: 10px;font-size: 15px
+      }
+      button {
+        padding: 10px 20px;font-size: 16px;font-weight: 700;border-radius: 10px
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form id="adding">
+        <div>
+          <label> Name : </label>
+          <input required type="text" name="name" id="name" />
+        </div>
+        <div>
+          <label>Gender : </label>
+          <input required value="male" type="radio" name="gender" id="male" /> <span> male : </span>
+          <input required value="female" type="radio" name="gender" id="female" /> 
+         <span> female : </span>
+        </div>
+        <div>
+          <label>Address : </label>
+          <input required type="text" name="address" id="address">
+        </div>
+        <div>
+          <span> Education :  </span>
+          <select id="education">
+            <option value="matric">Matric</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="masters">Masters</option>
+          </select>
+        </div>
+        <div>
+          <span> Profession : </span>
+          <select id="profession">
+            <option value="programmer">Programmer</option>
+            <option value="doctor">Doctor</option>
+            <option value="engineer">Engineer</option>
+          </select>
+        </div>
+        <br />
+        <div class="btn-div">
+        <button onclick="getData()">
+          submit data
+        </button>
+      </form>
+      <button id="btn-record" disabled onclick="showDisplay()" type="button">
+        show record
+      </button>
+    </div>
+    </div>
+
+    <div id="display"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
